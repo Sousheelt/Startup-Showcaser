@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="nav-buttons">
+            <button class="about-us-button" onclick="document.location='about.html'">
+                <i class="fas fa-info-circle"></i> About Us
+            </button>
+            <button id="signInBtn" class="sign-in-button" onclick="openSignInModal()">
+                <i class="fas fa-user"></i> Sign In
+            </button>
+            <div id="userInfo" class="user-info hidden">
+                <span id="welcomeUser">Welcome, User</span>
+                <button id="signOutBtn" class="sign-out-button" onclick="signOut()">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </button>
+            </div>
+        </div>
+        <div class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeSignInModal()">&times;</span>
+            <h2>Sign In</h2>
+            <form id="signInForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="sign-in-submit">Sign In</button>
+            </form>
+            <p class="sign-up-link">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="content">
+            <h1>START UP<br>SHOWCASER</h1>
+            <p>Bursting with a startup idea or eager to discover the next big thing? Share your vision, explore fresh innovations, rate what inspires you, and express how each idea makes you feel.</p>
+            <button id="getStartedBtn" class="get-started disabled" onclick="tryGetStarted()">Get Started</button>
+        </div>
+        <div class="rocket-icon">🚀</div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

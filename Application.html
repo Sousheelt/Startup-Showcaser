@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application - Startup Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="post-styles.css">
+    <link rel="stylesheet" href="application-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="nav-links">
+            <button onclick="document.location='home.html'"><i class="fas fa-home"></i> Home</button>
+            <button onclick="document.location='post.html'"><i class="fas fa-pen"></i> Post</button>
+            <button onclick="document.location='review.html'"><i class="fas fa-star"></i> Review</button>
+        </div>
+        <div class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="home-container">
+        <div class="home-header">
+            <h1>Startup Application</h1>
+            <p>Tell us more about your startup to move to the next level</p>
+        </div>
+            <form id="applicationForm" class="application-form" style = "border-width: 100px;">
+                <!-- Step 1: Contact Information -->
+                <div class="form-step" data-step="1">
+                    <h2>Contact Information</h2><br>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" style="color: white;">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" style="color: white;">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" style="color: white;">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" style="color: white;">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="position" style="color: white;">Your Position in the Company <span class="required">*</span></label>
+                        <select id="position" name="position" class="form-input" required>
+                            <option value="">Select your position</option>
+                            <option value="Founder">Founder</option>
+                            <option value="Co-Founder">Co-Founder</option>
+                            <option value="CEO">CEO</option>
+                            <option value="CTO">CTO</option>
+                            <option value="COO">COO</option>
+                            <option value="CFO">CFO</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn next-btn">Next Step</button>
+                    </div>
+                </div>
+
+                
+
+    <script src="script.js"></script>
+    <script src="application.js"></script>
+</body>
+</html>

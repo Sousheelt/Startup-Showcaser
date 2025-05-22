@@ -1,0 +1,52 @@
+/* Styles specific to the application page */
+
+.application-container { background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); padding: 30px; margin-bottom: 50px; color: #333; }
+
+/* Form Styles */ .form-step { display: block; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 1; transform: translateX(0); }
+
+.form-step.hidden { display: none; opacity: 0; transform: translateX(20px); }
+
+.form-step h2 { font-size: 24px; color: 
+#7f4bcd; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+
+.form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+
+.form-row .form-group { flex: 1; }
+
+.form-group { margin-bottom: 20px; }
+
+.form-label { display: block; margin-bottom: 8px; font-weight: 500; }
+
+.required { color: 
+#e74c3c; margin-left: 3px; }
+
+.form-input, .form-textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; transition: border-color 0.3s; }
+
+.form-input:focus, .form-textarea:focus { border-color: 
+#7f4bcd; outline: none; box-shadow: 0 0 0 2px rgba(127, 75, 205, 0.2); }
+
+.form-textarea { min-height: 100px; resize: vertical; }
+
+
+/* Form Buttons */ .form-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+
+.form-buttons button:only-child { margin-left: auto; }
+
+.btn { padding: 12px 24px; border-radius: 6px; font-size: 16px; font-weight: 500; cursor: pointer; transition: all 0.3s; border: none; }
+
+.back-btn { background-color: 
+#f5f5f5; color: white; }
+
+.back-btn:hover { background-color: 
+#e5e5e5; }
+
+.next-btn, .submit-btn { background-color: 
+#7f4bcd; color: white; }
+
+.next-btn:hover, .submit-btn:hover { background-color: 
+#6b72cf; }
+
+.submit-btn:disabled { background-color: #ccc; cursor: not-allowed; }
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="nav-links">
+            <button onclick="document.location='post.html'"><i class="fas fa-pen"></i> Post</button>
+            <button onclick="document.location='review.html'"><i class="fas fa-star"></i> Review</button>
+            <button onclick="document.location='Application.html'"><i class="fas fa-chart-line"></i> Application</button>
+        </div>
+        <div class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="home-container">
+        <div class="home-header">
+            <h1>Welcome to Our Startup Platform</h1>
+            <p>Share, Review, and Grow Your Business Ideas</p>
+        </div>
+
+        <div class="content-section">
+            <div class="leaderboard">
+                <h2>Top Startups</h2>
+                <ul class="leaderboard-list" id="topIdeasList">
+                    <!-- Ideas will be loaded dynamically from localStorage -->
+                </ul>
+            </div>
+            <div class="description">
+                <h2>About Our Platform</h2>
+                <p>Our startup platform is designed to help entrepreneurs and innovators turn their ideas into successful businesses. We provide a unique ecosystem where you can share your startup concepts, receive valuable feedback from experts, and track your progress.</p>
+                
+                <p>Whether you're just starting out with a new business idea or looking to improve an existing one, our platform offers the tools and community support you need to succeed. The journey from concept to successful startup can be challenging, but with the right guidance and feedback, your chances of success increase dramatically.</p>
+                
+                <p>Our three-step process is simple:</p>
+                <ol>
+                    <li><strong>Post</strong> your startup ideas, business models, or concepts</li>
+                    <li><strong>Review</strong> and receive feedback from industry experts and fellow entrepreneurs</li>
+                    <li>Track your <strong>Results</strong> and see how your ideas evolve over time</li>
+                </ol>
+                
+                <p>We believe that collaboration and honest feedback are essential for innovation. By connecting entrepreneurs with experienced mentors and creating a supportive community, we help transform promising ideas into market-ready businesses.</p>
+                
+                <p>Join thousands of entrepreneurs who are already using our platform to refine their ideas, improve their business models, and connect with potential investors and partners.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Startup Platform. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="home-script.js"></script>
+</body>
+</html>

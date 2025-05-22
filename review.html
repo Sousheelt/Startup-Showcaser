@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review - Startup Ideas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="post-styles.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="nav-links">
+            <button onclick="document.location='home.html'"><i class="fas fa-home"></i> Home</button>
+            <button onclick="document.location='post.html'"><i class="fas fa-pen"></i> Post</button>
+            <button onclick="document.location='Application.html'"><i class="fas fa-chart-line"></i> Application</button>
+        </div>
+        <div class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="home-container">
+        <div class="home-header">
+            <h1>Review Startup Ideas</h1>
+            <p>Vote on ideas and help entrepreneurs refine their concepts</p>
+        </div>
+        
+        <div class="filter-section">
+            <div class="sort-options">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy" onchange="sortIdeas()">
+                    <option value="popular">Most Popular</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="leaderboard">
+                <h2>Startup Ideas</h2>
+                <ul class="leaderboard-list" id="ideasList">
+                    <!-- Ideas will be loaded dynamically from localStorage -->
+                </ul>
+            </div>
+            
+            <div class="description">
+                <h2>How to Review</h2>
+                <p>Your feedback is crucial for helping entrepreneurs refine their startup ideas. When reviewing, consider the following aspects:</p>
+                
+                <ol>
+                    <li><strong>Innovation:</strong> Is this idea unique or does it offer a unique approach to a known problem?</li>
+                    <li><strong>Market Potential:</strong> Is there a clear target market and demand for this solution?</li>
+                    <li><strong>Feasibility:</strong> Does the idea seem practical and achievable?</li>
+                    <li><strong>Impact:</strong> What positive change could this startup create?</li>
+                </ol>
+                
+                <p>Use the voting buttons to support ideas you believe in:</p>
+                <ul>
+                    <li><i class="fas fa-thumbs-up"></i> <strong>Upvote</strong> - For ideas you think have potential</li>
+                    <li><i class="fas fa-thumbs-down"></i> <strong>Downvote</strong> - For ideas that need significant improvement</li>
+                </ul>
+                
+                <p>Remember that constructive criticism is more valuable than simple praise or rejection. If you have specific suggestions, consider leaving a comment alongside your vote.</p>
+                
+                <div class="review-stats">
+                    <h3>Your Review Activity</h3>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" id="ideasReviewed">0</span>
+                            <span class="stat-label">Ideas Reviewed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="upvotesGiven">0</span>
+                            <span class="stat-label">Upvotes Given</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="downvotesGiven">0</span>
+                            <span class="stat-label">Downvotes Given</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Startup Platform. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="review.js"></script>
+</body>
+</html>
